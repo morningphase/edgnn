@@ -1,0 +1,112 @@
+apache_parsing_vulnerability.php
+-------------------------
+('apache2', '/var/www/html/apache_parsing_vulnerability.php/.htaccess', 'sys_openat'): 400
+('apache2', '/var/www/html/.htaccess', 'sys_openat'): 400
+('apache2', '/var/www/html/uploadfiles/input.png', 'sys_fstat'): 400
+('apache2', '/var/www/.htaccess', 'sys_openat'): 400
+('::ffff:a66f:5256:80', 'apache2', 'sys_getsockname'): 400
+('apache2', '/var/www/html/uploadfiles/input.png', 'sys_close'): 400
+('apache2', '/var/www/html/uploadfiles/input.png', 'sys_write'): 400
+('apache2', '/var/www/html/uploadfiles/input.png', 'sys_openat'): 399
+uploadfiles/cat_etc_passwd.php.jpeg
+-------------------------
+('apache2', '/var/www/html/uploadfiles/cat_etc_passwd.php.jpeg', 'sys_fstat'): 120
+('::ffff:a66f:5256:80', 'apache2', 'sys_getsockname'): 120
+('apache2', '/var/www/html/uploadfiles/cat_etc_passwd.php.jpeg/.htaccess', 'sys_openat'): 120
+('apache2', '/var/www/html/uploadfiles/cat_etc_passwd.php.jpeg', 'sys_write'): 120
+('apache2', '/var/www/html/.htaccess', 'sys_openat'): 120
+('/var/www/html/uploadfiles/cat_etc_passwd.php.jpeg', 'apache2', 'sys_read'): 120
+('apache2', '/var/www/html/uploadfiles/cat_etc_passwd.php.jpeg', 'sys_openat'): 120
+('cat', '/etc/passwd', 'sys_openat'): 120
+('apache2', '/var/www/html/uploadfiles/.htaccess', 'sys_openat'): 120
+('apache2', '/var/www/html/apache_parsing_vulnerability.php/.htaccess', 'sys_openat'): 120
+('apache2', '/var/www/.htaccess', 'sys_openat'): 120
+('apache2', '/var/www/html/uploadfiles/cat_etc_passwd.php.jpeg', 'sys_close'): 120
+uploadfiles/id.php.jpeg
+-------------------------
+('id', 'stdout', 'sys_close'): 120
+('/var/www/html/uploadfiles/id.php.jpeg', 'apache2', 'sys_read'): 120
+('apache2', '/var/www/html/uploadfiles/id.php.jpeg/.htaccess', 'sys_openat'): 120
+('/etc/group', 'id', 'sys_read'): 120
+('::ffff:a66f:5256:80', 'apache2', 'sys_getsockname'): 120
+('apache2', '/var/www/html/uploadfiles/id.php.jpeg', 'sys_openat'): 120
+('id', '/proc/filesystems', 'sys_openat'): 120
+('/proc/filesystems', 'id', 'sys_read'): 120
+('id', '/usr/bin/id', 'sys_execve'): 120
+('id', 'stdout', 'sys_write'): 120
+('apache2', '/var/www/html/.htaccess', 'sys_openat'): 120
+('id', '/etc/group', 'sys_openat'): 120
+('id', '/etc/passwd', 'sys_openat'): 120
+('id', '/proc/sys/kernel/ngroups_max', 'sys_openat'): 120
+('id', 'stderr', 'sys_close'): 120
+('apache2', '/var/www/html/uploadfiles/id.php.jpeg', 'sys_close'): 120
+('id', '/proc/filesystems', 'sys_close'): 120
+('apache2', '/var/www/html/uploadfiles/.htaccess', 'sys_openat'): 120
+('/proc/sys/kernel/ngroups_max', 'id', 'sys_read'): 120
+('apache2', '/var/www/html/apache_parsing_vulnerability.php/.htaccess', 'sys_openat'): 120
+('apache2', '/var/www/html/uploadfiles/id.php.jpeg', 'sys_fstat'): 120
+('id', '/etc/group', 'sys_close'): 120
+('id', '/proc/sys/kernel/ngroups_max', 'sys_close'): 120
+('id', '/etc/passwd', 'sys_close'): 120
+('apache2', '/var/www/.htaccess', 'sys_openat'): 120
+('/etc/passwd', 'id', 'sys_read'): 120
+('apache2', '/var/www/html/uploadfiles/id.php.jpeg', 'sys_write'): 120
+uploadfiles/ifconfig.php.jpeg
+-------------------------
+('ifconfig', '/proc/net/if_inet6', 'sys_fstat'): 120
+('/var/www/html/uploadfiles/ifconfig.php.jpeg', 'apache2', 'sys_read'): 120
+('ifconfig', '/proc/net/x25', 'sys_access'): 120
+('ifconfig', '/proc/sys/net/ash', 'sys_access'): 120
+('ifconfig', 'stdout', 'sys_write'): 120
+('apache2', '/var/www/html/uploadfiles/ifconfig.php.jpeg', 'sys_write'): 120
+('ifconfig', '/proc/net/dev', 'sys_openat'): 120
+('::ffff:a66f:5256:80', 'apache2', 'sys_getsockname'): 120
+('ifconfig', '/proc/net/appletalk', 'sys_access'): 120
+('/proc/net/dev', 'ifconfig', 'sys_read'): 120
+('apache2', '/var/www/html/.htaccess', 'sys_openat'): 120
+('apache2', '/var/www/html/uploadfiles/ifconfig.php.jpeg/.htaccess', 'sys_openat'): 120
+('ifconfig', '/proc/sys/net/econet', 'sys_access'): 120
+('apache2', '/var/www/html/uploadfiles/ifconfig.php.jpeg', 'sys_openat'): 120
+('ifconfig', '/proc/net/ax25', 'sys_access'): 120
+('ifconfig', '/proc/net/if_inet6', 'sys_openat'): 120
+('ifconfig', '/proc/net', 'sys_access'): 120
+('ifconfig', '/proc/net/rose', 'sys_access'): 120
+('ifconfig', '/proc/net/unix', 'sys_access'): 120
+('ifconfig', '/proc/net/ipx', 'sys_access'): 120
+('ifconfig', '/proc/net/dev', 'sys_close'): 120
+('apache2', '/var/www/html/uploadfiles/.htaccess', 'sys_openat'): 120
+('ifconfig', '/proc/net/nr', 'sys_access'): 120
+('ifconfig', '/proc/net/dev', 'sys_fstat'): 120
+('apache2', '/var/www/html/apache_parsing_vulnerability.php/.htaccess', 'sys_openat'): 120
+('apache2', '/var/www/html/uploadfiles/ifconfig.php.jpeg', 'sys_close'): 120
+('ifconfig', '/proc/net/if_inet6', 'sys_access'): 120
+('apache2', '/var/www/.htaccess', 'sys_openat'): 120
+('ifconfig', '/proc/net/if_inet6', 'sys_close'): 120
+('/proc/net/if_inet6', 'ifconfig', 'sys_read'): 120
+('ifconfig', 'stdout', 'sys_fstat'): 120
+('ifconfig', '/usr/sbin/ifconfig', 'sys_execve'): 120
+('apache2', '/var/www/html/uploadfiles/ifconfig.php.jpeg', 'sys_fstat'): 120
+-------------------------
+First-level key(s): ['apache_parsing_vulnerability.php'] contains unique second-level key '('apache2', '/var/www/html/uploadfiles/input.png', 'sys_fstat')'
+First-level key(s): ['apache_parsing_vulnerability.php'] contains unique second-level key '('apache2', '/var/www/html/uploadfiles/input.png', 'sys_close')'
+First-level key(s): ['apache_parsing_vulnerability.php'] contains unique second-level key '('apache2', '/var/www/html/uploadfiles/input.png', 'sys_write')'
+First-level key(s): ['apache_parsing_vulnerability.php'] contains unique second-level key '('apache2', '/var/www/html/uploadfiles/input.png', 'sys_openat')'
+First-level key(s): ['uploadfiles/cat_etc_passwd.php.jpeg'] contains unique second-level key '('apache2', '/var/www/html/uploadfiles/cat_etc_passwd.php.jpeg', 'sys_fstat')'
+First-level key(s): ['uploadfiles/cat_etc_passwd.php.jpeg'] contains unique second-level key '('apache2', '/var/www/html/uploadfiles/cat_etc_passwd.php.jpeg/.htaccess', 'sys_openat')'
+First-level key(s): ['uploadfiles/cat_etc_passwd.php.jpeg'] contains unique second-level key '('apache2', '/var/www/html/uploadfiles/cat_etc_passwd.php.jpeg', 'sys_write')'
+First-level key(s): ['uploadfiles/cat_etc_passwd.php.jpeg'] contains unique second-level key '('/var/www/html/uploadfiles/cat_etc_passwd.php.jpeg', 'apache2', 'sys_read')'
+First-level key(s): ['uploadfiles/cat_etc_passwd.php.jpeg'] contains unique second-level key '('apache2', '/var/www/html/uploadfiles/cat_etc_passwd.php.jpeg', 'sys_openat')'
+First-level key(s): ['uploadfiles/cat_etc_passwd.php.jpeg'] contains unique second-level key '('cat', '/etc/passwd', 'sys_openat')'
+First-level key(s): ['uploadfiles/cat_etc_passwd.php.jpeg'] contains unique second-level key '('apache2', '/var/www/html/uploadfiles/.htaccess', 'sys_openat')'
+First-level key(s): ['uploadfiles/cat_etc_passwd.php.jpeg'] contains unique second-level key '('apache2', '/var/www/html/uploadfiles/cat_etc_passwd.php.jpeg', 'sys_close')'
+First-level key(s): ['uploadfiles/id.php.jpeg'] contains unique second-level key '('id', 'stdout', 'sys_close')'
+First-level key(s): ['uploadfiles/id.php.jpeg'] contains unique second-level key '('/var/www/html/uploadfiles/id.php.jpeg', 'apache2', 'sys_read')'
+First-level key(s): ['uploadfiles/id.php.jpeg'] contains unique second-level key '('apache2', '/var/www/html/uploadfiles/id.php.jpeg/.htaccess', 'sys_openat')'
+First-level key(s): ['uploadfiles/id.php.jpeg'] contains unique second-level key '('/etc/group', 'id', 'sys_read')'
+First-level key(s): ['uploadfiles/ifconfig.php.jpeg'] contains unique second-level key '('ifconfig', '/proc/net/if_inet6', 'sys_fstat')'
+First-level key(s): ['uploadfiles/ifconfig.php.jpeg'] contains unique second-level key '('/var/www/html/uploadfiles/ifconfig.php.jpeg', 'apache2', 'sys_read')'
+First-level key(s): ['uploadfiles/ifconfig.php.jpeg'] contains unique second-level key '('ifconfig', '/proc/net/x25', 'sys_access')'
+First-level key(s): ['uploadfiles/ifconfig.php.jpeg'] contains unique second-level key '('ifconfig', '/proc/sys/net/ash', 'sys_access')'
+First-level key(s): ['uploadfiles/ifconfig.php.jpeg'] contains unique second-level key '('ifconfig', 'stdout', 'sys_write')'
+First-level key(s): ['uploadfiles/ifconfig.php.jpeg'] contains unique second-level key '('apache2', '/var/www/html/uploadfiles/ifconfig.php.jpeg', 'sys_write')'
+First-level key(s): ['uploadfiles/ifconfig.php.jpeg'] contains unique second-level key '('ifconfig', '/proc/net/dev', 'sys_openat')'
