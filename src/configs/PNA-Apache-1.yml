@@ -1,0 +1,141 @@
+data_config:
+  splits:
+    train: 0.8
+    valid: 0.1
+    test: 0.1
+  batch_size: 192 # 64 128 192 256
+  mode: 'common'
+  parameters:
+    
+
+model_config:
+  model_name: PNA
+  hidden_size: 192 # 40, 80, 120
+  n_layers: 4
+  dropout_p: 0.3 # 0.1, 0.2, 0.3, 0.4, 0.5
+  aggregators:
+    - mean
+    - min
+    - max
+    - std
+    - sum
+  scalers: false
+  pretrain_lr: 0.001
+  pretrain_epochs: 50
+  pretrain_wd: 3.0e-6
+
+shared_config:
+  learn_edge_att: false
+  precision_k: 2
+  num_viz_samples: 8
+  viz_interval: 10
+  viz_norm_att: true
+  extractor_dropout_p: 0.5 # 0.3 0.5 0.7
+
+GSAT_config:
+  method_name: 'GSAT'
+  pred_loss_coef: 1
+  info_loss_coef: 1 # (0.5, 1, 3, 5)^2
+  epochs: 500
+  lr: 1.0e-3 # 1e-4, 1e-3, 5e-3
+  weight_decay: 3.0e-6
+
+  from_scratch: true
+  fix_r: false
+  decay_interval: 5
+  decay_r: 0.1
+  final_r: 0.5
+
+DGIB_config:
+  method_name: 'DGIB'
+  epochs: 100
+  lr: 1.0e-3 # 1.0e-4 3.0e-4 1.0e-3 3.0e-3
+  weight_decay: 3.0e-6
+  pred_loss_coef: 1
+  recon_loss_coef: 1
+  joint_disc_loss_coef: 3
+  joint_disc_loss2_coef: 3
+  marginal_disc_loss2_coef: 3
+
+
+  from_scratch: true
+  fix_r: false
+  decay_interval: 10
+  decay_r: 0.1
+  final_r: 0.5
+
+mode_config:
+  Apache-1:
+    common:
+      params: N
+    feature:
+      lamda: [0.5, 1.0, 1.5]
+    structure:
+       number: [9, 18, 27]
+       operation: 'remove'
+    evasion:
+      class1: ['/var/www/html/uploads/input ', '/var/www/html/uploads/poc1 ', '/var/www/html/uploads/poc2 ', '/var/www/html/uploads/poc3 ']
+      class2: ['/var/www/html/uploads/input ', '/var/www/html/uploads/poc1 ', '/var/www/html/uploads/poc2 ', '/var/www/html/uploads/poc3 ']
+      structuresize: [ 0.125, 0.25, 0.5 ]
+      portion: [0.125, 0.25, 0.5]
+    posion:
+      class1: [ '/var/www/html/uploads/input ', '/var/www/html/uploads/poc1 ', '/var/www/html/uploads/poc2 ', '/var/www/html/uploads/poc3 ' ]
+      class2: [ '/var/www/html/uploads/input ', '/var/www/html/uploads/poc1 ', '/var/www/html/uploads/poc2 ', '/var/www/html/uploads/poc3 ' ]
+      structuresize: [ 0.125, 0.25, 0.5 ]
+      portion: [ 0.125, 0.25, 0.5 ]
+  IM-2:
+    feature:
+      lamda: [ 0.5, 1.0, 1.5 ]
+    structure:
+      number: [ 9, 18, 27 ]
+      operation: 'remove'
+    evasion:
+      class1: [ '/var/www/html/uploads/input ', '/var/www/html/uploads/poc1 ', '/var/www/html/uploads/poc2 ', '/var/www/html/uploads/poc3 ' ]
+      class2: [ '/var/www/html/uploads/input ', '/var/www/html/uploads/poc1 ', '/var/www/html/uploads/poc2 ', '/var/www/html/uploads/poc3 ' ]
+      structuresize: [ 0.125, 0.25, 0.5 ]
+      portion: [ 0.125, 0.25, 0.5 ]
+    posion:
+      class1: [ '/var/www/html/uploads/input ', '/var/www/html/uploads/poc1 ', '/var/www/html/uploads/poc2 ', '/var/www/html/uploads/poc3 ' ]
+      class2: [ '/var/www/html/uploads/input ', '/var/www/html/uploads/poc1 ', '/var/www/html/uploads/poc2 ', '/var/www/html/uploads/poc3 ' ]
+      structuresize: [ 0.125, 0.25, 0.5 ]
+      portion: [ 0.125, 0.25, 0.5 ]
+    common:
+      params: N
+  Apache-1:
+    feature:
+      lamda: [ 0.5, 1.0, 1.5 ]
+    structure:
+      number: [ 9, 18, 27 ]
+      operation: 'remove'
+    evasion:
+      class1: [ 'apache_parsing_vulnerability.php', 'uploadfiles/cat_etc_passwd.php.jpeg', 'uploadfiles/id.php.jpeg', 'uploadfiles/ifconfig.php.jpeg' ]
+      class2: [ 'apache_parsing_vulnerability.php', 'uploadfiles/cat_etc_passwd.php.jpeg', 'uploadfiles/id.php.jpeg', 'uploadfiles/ifconfig.php.jpeg' ]
+      structuresize: [ 0.125, 0.25, 0.5 ]
+      portion: [ 0.125, 0.25, 0.5 ]
+    posion:
+      class1: [ 'apache_parsing_vulnerability.php', 'uploadfiles/cat_etc_passwd.php.jpeg', 'uploadfiles/id.php.jpeg', 'uploadfiles/ifconfig.php.jpeg' ]
+      class2: [ 'apache_parsing_vulnerability.php', 'uploadfiles/cat_etc_passwd.php.jpeg', 'uploadfiles/id.php.jpeg', 'uploadfiles/ifconfig.php.jpeg' ]
+      structuresize: [ 0.125, 0.25, 0.5 ]
+      portion: [ 0.125, 0.25, 0.5 ]
+    common:
+      params: N
+  Apache-2:
+    feature:
+      lamda: [ 0.5, 1.0, 1.5 ]
+    structure:
+      number: [ 9, 18, 27 ]
+      operation: 'remove'
+    evasion:
+      class1: [ 'POST /ssi-rce.php', 'cat_etc_passwd.shtml', 'id.shtml',  'ifconfig.shtml']
+      class2: [ 'POST /ssi-rce.php', 'cat_etc_passwd.shtml', 'id.shtml',  'ifconfig.shtml']
+      structuresize: [ 0.125, 0.25, 0.5 ]
+      portion: [ 0.125, 0.25, 0.5 ]
+    posion:
+      class1: [ 'POST /ssi-rce.php', 'cat_etc_passwd.shtml', 'id.shtml',  'ifconfig.shtml']
+      class2: [ 'POST /ssi-rce.php', 'cat_etc_passwd.shtml', 'id.shtml',  'ifconfig.shtml']
+      structuresize: [ 0.125, 0.25, 0.5 ]
+      portion: [ 0.125, 0.25, 0.5 ]
+    common:
+      params: N
+
+
